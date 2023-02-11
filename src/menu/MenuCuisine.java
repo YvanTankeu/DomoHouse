@@ -1,9 +1,6 @@
 package menu;
 
-import java.util.Scanner;
-
 class MenuCuisine extends Menu {
-    Scanner sc = new Scanner(System.in);
     int choix;
     boolean quitter = false;
     

@@ -1,12 +1,14 @@
+/**
+Classe MenuPrincipal qui hérite de la classe abstraite Menu
+Elle affiche le menu principal et exécute les actions associées à l'entrée de l'utilisateur
+*/
 package menu;
 
-import java.util.Scanner;
-
-class MenuPrincipal extends Menu {
-    Scanner sc = new Scanner(System.in);
+public class MenuPrincipal extends Menu {
     int choix;
     boolean quitter = false;
     
+    //Méthode pour afficher les options du menu principal
     public void afficher() {
         System.out.println("1. Garage");
         System.out.println("2. Salon");
@@ -14,7 +16,8 @@ class MenuPrincipal extends Menu {
         System.out.println("4. Quitter");
         System.out.print("Entrez votre choix : ");
     }
-    
+
+    //Méthode pour exécuter les actions associées au choix de l'utilisateur
     public void executer() {
         choix = sc.nextInt();
         switch (choix) {
