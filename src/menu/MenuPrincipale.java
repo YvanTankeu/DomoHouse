@@ -21,10 +21,6 @@ class MenuPrincipal extends Menu {
             case 1:
                 System.out.println("Vous avez choisi le Garage");
                 MenuGarage menuGarage = new MenuGarage();
-                /*while (true) {
-                    menuGarage.afficher();
-                    menuGarage.executer();
-                }*/
                 menuGarage.afficher();
                 menuGarage.executer();
                 if (menuGarage.quitter) {
@@ -35,10 +31,6 @@ class MenuPrincipal extends Menu {
             case 2:
                 System.out.println("Vous avez choisi le Salon");
                 MenuSalon menuSalon= new MenuSalon();
-                /*while (true) {
-                    menuSalon.afficher();
-                    menuSalon.executer();
-                }*/
                 menuSalon.afficher();
                 menuSalon.executer();
                 if (menuSalon.quitter) {
@@ -48,10 +40,6 @@ class MenuPrincipal extends Menu {
             case 3:
                 System.out.println("Vous avez choisi la Cuisine");
                 MenuCuisine menuCuisine = new MenuCuisine();
-                /*while (true) {
-                    menuCuisine.afficher();
-                    menuCuisine.executer();
-                }*/
                 menuCuisine.afficher();
                 menuCuisine.executer();
                 if (menuCuisine.quitter) {
