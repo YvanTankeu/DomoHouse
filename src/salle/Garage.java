@@ -3,7 +3,7 @@ package salle;
 /**
  * Classe représentant un garage héritant de la classe Salle
  */
-class Garage extends Salle {
+public class Garage extends Salle {
     // Attributs représentant l'état de la porte du garage et de les lumieres
     private boolean garageOuvert;
     private boolean lumiereAllumee;
@@ -25,9 +25,9 @@ class Garage extends Salle {
         // Vérification si le garage est déjà ouvert
         if (!garageOuvert) {
             garageOuvert = true;
-            System.out.println("Le garage est ouvert.");
+            System.out.println("-> Garage ouvert.");
         } else {
-            System.out.println("Le garage est déjà ouvert.");
+            System.out.println("-> Garage  déjà ouvert.");
         }
     }
 

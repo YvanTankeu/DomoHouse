@@ -1,7 +1,12 @@
 package salle;
 
+import java.util.Scanner;
+
 // Classe Salle 
-class Salle {
+public class Salle {
+
+    private static Scanner sc = new Scanner(System.in);
+    
     private int surface;
     private String couleur;
 
@@ -68,6 +73,25 @@ class Salle {
             System.out.println("Les lumières sont éteintes.");
         } else {
             System.out.println("Les lumières sont déjà éteintes.");
+        }
+    }
+
+     public static void afficherMenuQuitter() {
+        boolean quitter = false;
+        while (!quitter) {
+            System.out.println("Voulez-vous :");
+            System.out.println("1. Effectuer une autre action");
+            System.out.println("2. Revenir au menu principal");
+            System.out.println("3. Quitter");
+            System.out.print("Entrez votre choix : ");
+            int reponse = sc.nextInt();
+            if (reponse == 1) {
+                continue;
+            } else if (reponse == 3) {
+                System.exit(0);
+            } else if (reponse == 2) {
+                quitter = true;
+            }
         }
     }
 }

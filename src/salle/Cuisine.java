@@ -1,6 +1,5 @@
 package salle;
 
-
 /**
  * Classe représentant une cuisine héritant de la classe Salle
  */
