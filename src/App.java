@@ -7,13 +7,16 @@ import menu.MenuPrincipal;
 public class App {
     public static void main(String[] args) throws Exception {
         Menu menu = new MenuPrincipal();
-        while (true) {
-            menu.afficher();
-            try {
+        try {
+            while (true) {
+                menu.afficher();
                 menu.executer();
-            } catch (InputMismatchException e) {
-                System.out.println(e.getMessage());
             }
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            System.out.println("Le programme est fermé.");
+            System.exit(0);
         }
     }
 }
