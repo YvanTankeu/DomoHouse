@@ -1,4 +1,6 @@
 
+import java.util.InputMismatchException;
+
 import menu.Menu;
 import menu.MenuPrincipal;
 
@@ -7,7 +9,11 @@ public class App {
         Menu menu = new MenuPrincipal();
         while (true) {
             menu.afficher();
-            menu.executer();
+            try {
+                menu.executer();
+            } catch (InputMismatchException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }

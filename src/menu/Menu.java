@@ -4,7 +4,7 @@ import java.util.Scanner;
 // Classe abstraite pour les menus
 public abstract class Menu {
   // Variable statique pour lire les entrées utilisateur
-  static Scanner sc = new Scanner(System.in);
+  public static Scanner sc = new Scanner(System.in);
   
   // Méthode abstraite pour afficher le menu à l'écran pour l'utilisateur
   public abstract void afficher();

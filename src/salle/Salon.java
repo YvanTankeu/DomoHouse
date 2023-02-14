@@ -3,7 +3,7 @@ package salle;
 /**
  * Classe représentant un Salon héritant de la classe Salle
  */
-class Salon extends Salle {
+public class Salon extends Salle {
     // Attributs représentant l'état de la TV et de la climatisation
     private boolean tvAllumee;
     private boolean climatisationAllumee;

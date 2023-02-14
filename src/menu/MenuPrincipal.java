@@ -4,6 +4,8 @@ Elle affiche le menu principal et exécute les actions associées à l'entrée d
 */
 package menu;
 
+import java.util.InputMismatchException;
+
 public class MenuPrincipal extends Menu {
     int choix;
     boolean quitter = false;
@@ -22,8 +24,9 @@ public class MenuPrincipal extends Menu {
     }
 
     // Méthode pour exécuter les actions associées au choix de l'utilisateur
-    public void executer() {
+    public void executer() throws InputMismatchException {
         choix = sc.nextInt();
+        sc.nextLine();
         switch (choix) {
             case 1:
                 System.out.println("--------------------------------------------------");
@@ -66,8 +69,7 @@ public class MenuPrincipal extends Menu {
                 System.exit(0);
                 break;
             default:
-                System.out.println("\n\tChoix non valide");
-                break;
+                throw new InputMismatchException("Choix non valide");
         }
     }
 }

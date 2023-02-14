@@ -3,7 +3,7 @@ package salle;
 /**
  * Classe représentant une cuisine héritant de la classe Salle
  */
-class Cuisine extends Salle {
+public class Cuisine extends Salle {
     // Attributs représentant l'état du four  et du lave vaisselle
     private boolean fourAllume;
     private boolean laveVaisselleAllume;

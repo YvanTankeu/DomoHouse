@@ -1,11 +1,13 @@
 package menu;
 
 import salle.Garage;
+import java.util.InputMismatchException;
 
 class MenuGarage extends Menu {
     int choix;
     boolean quitter = false;
 
+     // Affiche les options du menu garage
     public void afficher() {
         System.out.println("\n--------- GESTION DU GARAGE ---------");
         System.out.println("1. Ouvrir le garage");
@@ -17,11 +19,13 @@ class MenuGarage extends Menu {
         System.out.print("Entrez votre action : ");
     }
 
-    public void executer() {
+     // Exécute l'action choisie par l'utilisateur dans le menu garage
+    public void executer() throws InputMismatchException{
         Garage garage = new Garage(12, "Jaune");
         while (!quitter) {
             afficher();
             choix = sc.nextInt();
+            sc.nextLine();
             switch (choix) {
                 case 1:
                     System.out.println("--------------------------------------------------");
@@ -47,8 +51,7 @@ class MenuGarage extends Menu {
                     quitter = true;
                     return;
                 default:
-                    System.out.println("\n Choix non valide");
-                    break;
+                    throw new InputMismatchException("Choix non valide");
             }
 
             if (!quitter) {
@@ -65,6 +68,8 @@ class MenuGarage extends Menu {
                     System.exit(0);
                 } else if (reponse == 2) {
                     quitter = true;
+                }else{
+                    System.out.println("Choix non valide");
                 }
             }
         }
